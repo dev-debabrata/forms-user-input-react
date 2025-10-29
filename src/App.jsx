@@ -1,9 +1,17 @@
-import React from 'react'
+import Header from './components/Header.jsx';
+// import Signup from './components/Signup.jsx';
+import Login from './components/Login.jsx';
 
-const App = () => {
+function App() {
   return (
-    <div>App</div>
-  )
+    <>
+      <Header />
+      <main>
+        <Login />
+        {/* <Signup /> */}
+      </main>
+    </>
+  );
 }
 
-export default App
+export default App;
