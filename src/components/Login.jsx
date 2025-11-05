@@ -1,6 +1,8 @@
 import Input from "./Input.jsx";
 import { isEmail, isNotEmpty, hasMinLength } from "../util/validation.js";
 import { useInput } from "../hooks/useInput.js";
+import { Link } from "react-router-dom";
+
 
 export default function Login() {
   const {
@@ -36,7 +38,7 @@ export default function Login() {
         Login
       </h2>
 
-      <div className="flex flex-wrap justify-start gap-4">
+      <div className="flex justify-center gap-8">
         <Input
           label="Email"
           id="email"
@@ -60,7 +62,7 @@ export default function Login() {
         />
       </div>
 
-      <div className="flex justify-end gap-4 mt-6">
+      <div className="flex justify-end gap-4 mt-4 mr-6">
         <button
           type="button"
           className="px-4 py-2 text-base rounded bg-transparent text-stone-300 hover:text-stone-500 focus:text-stone-500 cursor-pointer"
@@ -73,6 +75,14 @@ export default function Login() {
         >
           Login
         </button>
+      </div>
+      <div className='flex justify-center mt-4'>
+        <p className='text-base text-stone-400'>
+          Don't have an account?{" "}
+          <Link to="/signup" className='text-stone-200 hover:underline'>
+            Sign Up
+          </Link>
+        </p>
       </div>
     </form>
   );

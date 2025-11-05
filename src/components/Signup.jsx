@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Signup() {
   const [passwordsAreNotEqual, setPasswordsAreNotEqual] = useState(false);
@@ -225,6 +226,14 @@ export default function Signup() {
         >
           Sign up
         </button>
+      </div>
+      <div className='flex justify-center mt-4'>
+        <p className='text-base text-stone-400'>
+          Already have an account?{" "}
+          <Link to="/login" className='text-stone-200 hover:underline'>
+            Login
+          </Link>
+        </p>
       </div>
     </form>
   );
